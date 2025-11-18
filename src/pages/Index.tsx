@@ -26,21 +26,21 @@ const slides = [
     subtitle: 'Три направления развития корпоративной культуры',
     content: (
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
+        <Card className="p-6 bg-white hover:shadow-lg transition-shadow animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="text-mts-red mb-4">
             <Icon name="Bell" size={40} />
           </div>
           <h3 className="font-montserrat font-semibold text-lg mb-3">Оперативная информация</h3>
           <p className="text-gray-600 font-roboto">Быстрое донесение важной информации до всех сотрудников</p>
         </Card>
-        <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
+        <Card className="p-6 bg-white hover:shadow-lg transition-shadow animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           <div className="text-mts-red mb-4">
             <Icon name="Users" size={40} />
           </div>
           <h3 className="font-montserrat font-semibold text-lg mb-3">Корпоративная культура</h3>
           <p className="text-gray-600 font-roboto">Укрепление единства и вовлеченности команды</p>
         </Card>
-        <Card className="p-6 bg-white hover:shadow-lg transition-shadow">
+        <Card className="p-6 bg-white hover:shadow-lg transition-shadow animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="text-mts-red mb-4">
             <Icon name="Smile" size={40} />
           </div>
@@ -56,7 +56,7 @@ const slides = [
     subtitle: 'Преимущества радиоформата для бизнеса',
     content: (
       <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <Card className="p-6 bg-white border-l-4 border-mts-red">
+        <Card className="p-6 bg-white border-l-4 border-mts-red animate-scale-in" style={{animationDelay: '0.1s'}}>
           <div className="flex items-start gap-4">
             <div className="text-mts-red mt-1">
               <Icon name="Zap" size={32} />
@@ -67,7 +67,7 @@ const slides = [
             </div>
           </div>
         </Card>
-        <Card className="p-6 bg-white border-l-4 border-mts-red">
+        <Card className="p-6 bg-white border-l-4 border-mts-red animate-scale-in" style={{animationDelay: '0.2s'}}>
           <div className="flex items-start gap-4">
             <div className="text-mts-red mt-1">
               <Icon name="Headphones" size={32} />
@@ -78,7 +78,7 @@ const slides = [
             </div>
           </div>
         </Card>
-        <Card className="p-6 bg-white border-l-4 border-mts-red">
+        <Card className="p-6 bg-white border-l-4 border-mts-red animate-scale-in" style={{animationDelay: '0.3s'}}>
           <div className="flex items-start gap-4">
             <div className="text-mts-red mt-1">
               <Icon name="Heart" size={32} />
@@ -89,7 +89,7 @@ const slides = [
             </div>
           </div>
         </Card>
-        <Card className="p-6 bg-white border-l-4 border-mts-red">
+        <Card className="p-6 bg-white border-l-4 border-mts-red animate-scale-in" style={{animationDelay: '0.4s'}}>
           <div className="flex items-start gap-4">
             <div className="text-mts-red mt-1">
               <Icon name="Layers" size={32} />
@@ -117,7 +117,7 @@ const slides = [
           { icon: 'Music', text: 'Тематические музыкальные подборки' },
           { icon: 'Workflow', text: 'Интеграция в корпоративную ИТ-инфраструктуру' },
         ].map((item, idx) => (
-          <Card key={idx} className="p-5 bg-white hover:bg-gray-50 transition-colors">
+          <Card key={idx} className="p-5 bg-white hover:bg-gray-50 transition-colors animate-fade-in-up" style={{animationDelay: `${idx * 0.1}s`}}>
             <div className="flex items-center gap-4">
               <div className="text-mts-red">
                 <Icon name={item.icon} size={28} />
@@ -135,7 +135,7 @@ const slides = [
     subtitle: 'Выгоды для компании и клиентов',
     content: (
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div>
+        <div className="animate-fade-in-up" style={{animationDelay: '0.1s'}}>
           <div className="bg-mts-red text-white p-4 rounded-t-lg">
             <h3 className="font-montserrat font-bold text-xl flex items-center gap-2">
               <Icon name="Briefcase" size={24} />
@@ -157,7 +157,7 @@ const slides = [
             </div>
           </Card>
         </div>
-        <div>
+        <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <div className="bg-mts-red text-white p-4 rounded-t-lg">
             <h3 className="font-montserrat font-bold text-xl flex items-center gap-2">
               <Icon name="ShoppingBag" size={24} />
@@ -194,8 +194,8 @@ const slides = [
             { num: '02', text: 'Техническое развёртывание инфраструктуры' },
             { num: '03', text: 'Запуск пилотного эфира' },
             { num: '04', text: 'Анализ результатов и масштабирование' },
-          ].map((step) => (
-            <div key={step.num} className="flex items-center gap-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+          ].map((step, idx) => (
+            <div key={step.num} className="flex items-center gap-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow animate-fade-in-up" style={{animationDelay: `${idx * 0.1}s`}}>
               <div className="w-16 h-16 bg-mts-red text-white rounded-lg flex items-center justify-center font-montserrat font-bold text-xl flex-shrink-0">
                 {step.num}
               </div>
@@ -203,7 +203,7 @@ const slides = [
             </div>
           ))}
         </div>
-        <Card className="p-8 bg-white border-2 border-mts-red">
+        <Card className="p-8 bg-white border-2 border-mts-red animate-scale-in" style={{animationDelay: '0.5s'}}>
           <h3 className="font-montserrat font-bold text-2xl mb-4 text-center">Контакты</h3>
           <div className="text-center space-y-3">
             <p className="font-montserrat font-semibold text-xl">Тигран</p>
@@ -229,6 +229,10 @@ const slides = [
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  const exportToPDF = () => {
+    window.print();
+  };
 
   const goToSlide = (index: number) => {
     if (index === currentSlide || isAnimating) return;
@@ -259,8 +263,20 @@ export default function Index() {
   }, [currentSlide]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-mts-gray to-white font-roboto">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="min-h-screen bg-gradient-to-br from-mts-gray to-white font-roboto relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none opacity-5">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E30611" strokeWidth="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+      <div className="absolute top-20 right-10 w-96 h-96 bg-mts-red opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-20 left-10 w-80 h-80 bg-mts-red opacity-5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
         <div className="mb-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-12 h-12 bg-mts-red rounded-lg flex items-center justify-center text-white font-montserrat font-bold text-2xl">
@@ -268,8 +284,18 @@ export default function Index() {
             </div>
             <span className="font-montserrat font-bold text-2xl text-gray-800">МТС</span>
           </div>
-          <div className="text-sm text-gray-500 font-roboto">
-            {currentSlide + 1} / {slides.length}
+          <div className="flex items-center gap-4">
+            <Button
+              onClick={exportToPDF}
+              variant="outline"
+              className="border-mts-red text-mts-red hover:bg-mts-red hover:text-white print:hidden"
+            >
+              <Icon name="Download" size={18} className="mr-2" />
+              Скачать PDF
+            </Button>
+            <div className="text-sm text-gray-500 font-roboto">
+              {currentSlide + 1} / {slides.length}
+            </div>
           </div>
         </div>
 
